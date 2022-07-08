@@ -1,5 +1,14 @@
+
+let yeetkid
+
+let yeetbool = false
+
+function preload(){
+  yeetkid = loadImage('yeetkid.gif')
+}
+
 function setup() {
-  createCanvas(401, 400);
+  createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
@@ -30,4 +39,28 @@ function draw() {
   ellipse(300, 300, 25, 25)
   fill(0)
   triangle(196, 200, 206, 200, 201, 205)
+
+  text('Click x', windowWidth/2, windowHeight/2)
+
+  if(yeetbool == true){
+    playGif()
+  }
 }
+
+function keyTyped(){
+
+if(key === 'x'){
+  yeetbool = true
+}
+
+if(key === 'c'){
+yeetbool = false}
+
+}
+
+function playGif(){
+  image(yeetkid, windowWidth, windowHeight, 300, 300)
+}
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight)}
